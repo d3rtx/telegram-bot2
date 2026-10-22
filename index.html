@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Games Stars</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-left">⭐ Mini Games</div>
+            <div class="header-right" id="balanceDisplay">Баланс: <span id="balance">0</span> ⭐</div>
+        </header>
+
+        <main class="main">
+            <!-- Информация -->
+            <section class="card info-card">
+                <h2>Игра на реакцию</h2>
+                <p>Нажми на кнопку, как только она загорится зелёным!</p>
+                <p>Стоимость попытки: <span id="gameCost">5</span> ⭐</p>
+                <p>Возможный выигрыш: <span id="gameWin">20</span> ⭐</p>
+            </section>
+
+            <!-- Игровая зона -->
+            <section class="card game-card">
+                <div class="game-status" id="gameStatus">Готов играть?</div>
+                <button id="playBtn" class="btn btn-primary">Начать игру</button>
+                <button id="targetBtn" class="target hidden">Нажми!</button>
+                <div class="game-result" id="gameResult"></div>
+            </section>
+
+            <!-- Пополнение -->
+            <section class="card shop-card">
+                <h3>🛒 Купить звёзды</h3>
+                <p>Пополните баланс, чтобы играть</p>
+                <div class="shop-buttons" id="shopButtons">
+                    <!-- Кнопки будут добавлены через JS -->
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <button id="refreshBtn" class="btn btn-outline">Обновить баланс</button>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
